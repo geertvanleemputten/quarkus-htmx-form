@@ -1,0 +1,10 @@
+<div id="navbar-user"
+     _="on click from elsewhere add .hidden to #navbar-user-dropdown"
+     class="md:relative flex items-center justify-center w-10 h-10"
+     hx-trigger="load, user from:document"
+     hx-get="{uri:AppFormComponent.load}"
+     hx-preserve>
+
+    {#include AppFormComponent/skeleton /}
+
+</div>

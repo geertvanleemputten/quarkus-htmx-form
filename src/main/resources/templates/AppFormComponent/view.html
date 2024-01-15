@@ -1,0 +1,30 @@
+<button _="on click toggle .hidden on #navbar-user-dropdown"
+        class="flex border border-gray-800 text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+        type="button">
+    <span class="sr-only">Open user menu</span>
+    <img src="https://res.cloudinary.com/diuqt0kid/image/upload/w_32,h_32,f_webp,fl_awebp,q_auto/v1700496696/afterlife/user"
+         class="w-10 h-10 rounded-full" alt="User avatar"/>
+</button>
+
+<div class="absolute top-full right-0 xl:right-0-1/2 xl:transform xl:translate-x-1/2 md:mt-4 hidden border w-screen md:w-48 z-50 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+     id="navbar-user-dropdown">
+
+    <div class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
+        <span class="block text-sm text-gray-900 font-bold dark:text-white">
+            test
+        </span>
+        <span class="block text-sm text-gray-500 truncate dark:text-gray-400">
+            test
+        </span>
+    </div>
+
+    <form hx-post="{uri:AppFormComponent.subscribe}" class="p-2">
+        {#fragment id = "subscriptionForm"}
+            {#formInput name = "email" type = "email" label = "Email" /}
+            <button type="submit"
+                    class="mt-2 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Subscribe
+            </button>
+        {/fragment}
+    </form>
+</div>

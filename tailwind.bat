@@ -1,0 +1,1 @@
+tailwindcss -i tailwind.css -o src/main/resources/web/app/tailwind.css -w
