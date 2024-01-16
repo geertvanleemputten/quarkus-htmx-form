@@ -24,9 +24,15 @@ public class AppFormComponent extends Controller {
         return Templates.view();
     }
 
+    @GET
+    public TemplateInstance subscribtionForm() {
+        return Templates.view$subscriptionForm();
+    }
+
     @POST
     public TemplateInstance subscribe(@RestForm @Email @NotBlank String email) {
         validation.addError("email", "Email is already taken");
+        if (validation.hasErrors()) subscribtionForm();
         return Templates.view$subscriptionForm();
     }
 }

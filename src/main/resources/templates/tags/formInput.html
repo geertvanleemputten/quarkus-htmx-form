@@ -5,7 +5,7 @@
            placeholder="{placeholder ?: ''}"
            required=""
            autocomplete="off"
-           value="{value ?: ''}">
+           value="{inject:flash.get(name)}">
     {#ifError name}
         <span class="text-red-500">* {#error name/}</span>
     {/ifError}
